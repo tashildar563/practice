@@ -16,6 +16,7 @@ import org.example.sortingAlgo.BubbleSort;
 import org.example.sortingAlgo.MergeSort;
 import org.example.tree.BreadthFirstSearchTraversal;
 import org.example.tree.DepthFirstTraversal;
+import org.example.tree.MaximumLevelSumofaBinaryTree;
 import org.example.twopointers.MoveAllZerosToEndOfTheArray;
 import org.example.twopointers.RemoveAllOccurenceOfAnelementFromArray;
 import org.example.userManagementSystem.Organisation;
@@ -182,6 +183,10 @@ public class SolutionFactory {
         return new FourDivisors();
       case 79:
         return new MaximumMatrixSum();
+      case 80:
+        return new Stack_EvaluateReversePolishNotation();
+      case 81:
+        return new MaximumLevelSumofaBinaryTree();
       default:
         return null;
     }
