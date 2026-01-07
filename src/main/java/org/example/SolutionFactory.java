@@ -187,6 +187,18 @@ public class SolutionFactory {
         return new Stack_EvaluateReversePolishNotation();
       case 81:
         return new MaximumLevelSumofaBinaryTree();
+      case 82:
+        return new ReorderPowerOf2();
+      case 83:
+        return new RangeProductQueriesofPowers();
+      case 84:
+        return new MaximumProductOfSplittedBinaryTree();
+      case 85:
+        return new MajorElement();
+      case 86:
+        return new UniqueNumber();
+      case 87:
+        return new WaystoExpressanIntegerasSumofPowers();
       default:
         return null;
     }

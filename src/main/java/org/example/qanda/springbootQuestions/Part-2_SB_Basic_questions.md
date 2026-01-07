@@ -26,3 +26,16 @@ and embedded application server(like tomcat, jetty).
 * @RestController is a convenience annotation for creating restful controllers. it is a specialisation of @Component and is autodetected through classpath scanning. it adds the @Controller and @ResponseBody annotations. it converts the reponse to JSON or XML
 * which eliminates teh need to annotate every request handling method of the controller class with the @ResponseBody annotation. it is typically used in combination with annotated handler method based on the @requestMapping annotation.
 * indicates that the data returned by each method will be written straight into the response body instead of rendering a template.
+
+### how does Springboot support asynchronous processing?
+spring boot supports asynchronous processing using the @Async annotation. to enable it you need to add @EnableAsync in a configuration class. methods annotated with @Async run in a separate thread pool and return a Future or CompletableFuture.
+
+### What is the significance fo spring boots @Conditional annotations?
+* Spring boots @Conditional annotations allows beans to be loaded conditionally based on:
+  * the presence/absence of a class (@ConditionalOnClass or @ConditionalOnMissingClass).
+  * A specific property value (@ConditionalOnProperty).
+  * A Particular bean being defined (@ConditionalOnBean).
+  * A Custom condition (@Conditional)
+
+### what is CSRF Protection in spring security and how can you disable it?
+CSRF (cross site request forgery) is an attack where a user is tricked into performing unintended actions on a web application they are authenticated to . spring security provides protection against CSRF token for sensitive request (like POST, PUT, DELETE), which ensures the request is coming from the legitimate user.
