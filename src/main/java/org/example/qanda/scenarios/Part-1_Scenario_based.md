@@ -47,3 +47,12 @@ a sequence of local, ACID-compliant transactions, each triggering the next via e
 * types of SAGA:
   * choreography : each service publishes events, other services subscribe and react no central coordincator.
   * Orchestration : A central service manages the flow, telling each participant service when to do.
+
+### 16. How do you secure Spring Boot REST APIs using OAuth2 for login with a provider like Google?
+add dependency >> spring-boot-starter-oauth2-client
+configure client registration : add client id and secret in application.properties
+implement security configuration >> use .oauthlogin() in project http security setup.
+handle oauth2 success: implement a custom success handler
+process Tokens use your JwtService to generate and validate access and refresh token for secured API access.
+
+

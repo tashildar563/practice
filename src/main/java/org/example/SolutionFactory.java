@@ -199,6 +199,12 @@ public class SolutionFactory {
         return new UniqueNumber();
       case 87:
         return new WaystoExpressanIntegerasSumofPowers();
+      case 88:
+        return new MaxDotProductofTwoSubsequences();
+      case 89:
+        return new Largest3SameDigitNumberinString();
+      case 90:
+        return new MiniParser();
       default:
         return null;
     }

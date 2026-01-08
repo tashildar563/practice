@@ -163,6 +163,20 @@ while externalisable requires explicit control through custom read/write methods
 | Ease of use | High (very easy)          | requires custom implementation                    |
 | Security    | exposes private data      | only explicit data saved                          |
 
+### deos constructor create the object in java ?
+no the new keyword handles object creation and memory allocation constructors initialise the objects instance variables.
+
+### can constructor be overloaded ?
+yes class can have multiple constructors with the same name but deffering parameter list.
+
+### What is constructor chaining 
+one constructor calling another 
+this() for the same class or super() for the parent class this call must be the first statement.
+
+### why are constructor not inherited in java?
+constructors are not inherited because they match the class name subclass constructors 
+can call superclass constructor using super() for initialisation.
+
 
 
 

@@ -39,3 +39,28 @@ spring boot supports asynchronous processing using the @Async annotation. to ena
 
 ### what is CSRF Protection in spring security and how can you disable it?
 CSRF (cross site request forgery) is an attack where a user is tricked into performing unintended actions on a web application they are authenticated to . spring security provides protection against CSRF token for sensitive request (like POST, PUT, DELETE), which ensures the request is coming from the legitimate user.
+
+### how does SB handle caching and what are the different annotations available for caching?
+spring boot handles caching through its @Cacheable through its @Caheable, @CachePut, and @CasheEvict annotations.
+* @Cacheable: cashe the result of a method.if the method is called withthe same parameters the cashed result is returned instead of executing the method again.
+* @CashePut : updates the cache with the methods result, even if the result already exists in the cache.
+* @CacheEvict: removes data from the cache. it can be used fro clearing caches after an update.
+
+### what are the different scopes of Spring beans?
+* singleton : 
+  * single shared instance of the bean is created and used throughout the spring IOC container. this is the default scope if no scope is specified. every request for this bean will return the same instance.
+* prototype:
+  * a new instance of the bean is created each time it is requested from the spring container.
+  * this scope is suitable for beans that need to be stateless or have a short lifecycle.
+* request
+  * a new instance is created for each HTTP request.
+  * teh bean is only available during the lifecycle of the http request and is discarded after teh request is completed.
+* session 
+  * new instance is created for each http session.
+  * the bean is only available during the lifecycle of the http request and is discarded after the request is completed.
+* application
+  * a single instance of the bean is created for the entire ServeletContext
+  * the bean is shared across all http request and sessions in the application
+* websocket
+  * a new instance is created for each websocket connection
+  * the bean is tied to the lifecycle of a websocket connection and is discarded once the connection is closed.
