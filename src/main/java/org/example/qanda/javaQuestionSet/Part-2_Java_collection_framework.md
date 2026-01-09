@@ -31,6 +31,12 @@ stateDiagram
     SortedSet --> TreeSet
     Set -->HashSet
     Set--> LinkedHashSet
+    
+    Map -->SortedMap
+    Map --> HashMap
+    SortedMap --> NavigableMap
+    NavigableMap-->TreeMap
+
 ```
 ### Iterable Interface:
 * This collection framework primary interface. is extended by the collection interface
@@ -154,4 +160,41 @@ stateDiagram
   mapping for key.
   * if map.put(k,v) returns null, then the statement `map.put(e,PRESENT) == null` will return true and element is added to the HashSet.
   * if map.put(k,v) returns value of key, then the statement `map.put(e,present) == null` will return false and element is not added.
-  * 
+  
+### Array vs Collection
+| Array                                                                                                          | Collection                                                                                                    |
+|:---------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| Array are fixed in size that once we create an array we can not increase or decrease based on our requirements | the collection is growable in nature adn is based on our requirementsw. we can increase or decrease the size. |
+| with respect ot memory array are not recomended for use                                                        | With respect to memory collecitons are recomended for use                                                     |
+| Array can hold only homogeneous data types elements                                                            | Collection can hold both homogeneous and heterogeneous elements.                                              |
+| faster compare to collection                                                                                   | slower compare to array.                                                                                      |
+
+### Interface used in java collection : 
+1. List
+2. Map
+3. Collection
+4. SEt
+5. Queue
+6. Deque
+
+### Advantage of the collection framework
+* Consisten API
+* Reduces Programming effort
+* Increases program speed and quality
+
+### what is iterator
+* is an object that provides a standard way to traverse the elements of any collection
+* only supports forward traversal 
+
+### what difference between an iterator and enumeration
+a major difference between iterator and enumeration is that iterator have a remove() method while enumerations do not.
+thus using iterator we can manipulate objects by adding and removing them from collecitons. enumeration can only traverse objects and getch them it behaves like a read only interface.
+
+### List vs Set
+| List                                        | Set                                     |
+|:--------------------------------------------|:----------------------------------------|
+| List is an indexed sequence.                | The set is non indexed sequence         |
+| the list allows duplicate element           | No duplicate element                    |
+| elements by their posisiton can be accessed | position access elements is not allowed |
+| multiple null element                       | only once null element                  |
+| ArrayList, LinkedList, Vecotr, Stack        | HashSet, LinkedHashSet                  |
