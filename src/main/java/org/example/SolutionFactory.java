@@ -205,6 +205,8 @@ public class SolutionFactory {
         return new Largest3SameDigitNumberinString();
       case 90:
         return new MiniParser();
+      case 91:
+        return new SmallestSubtreewithalltheDeepestNodes();
       default:
         return null;
     }

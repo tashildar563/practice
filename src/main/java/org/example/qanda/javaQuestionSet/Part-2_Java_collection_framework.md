@@ -154,3 +154,4 @@ stateDiagram
   mapping for key.
   * if map.put(k,v) returns null, then the statement `map.put(e,PRESENT) == null` will return true and element is added to the HashSet.
   * if map.put(k,v) returns value of key, then the statement `map.put(e,present) == null` will return false and element is not added.
+  * 

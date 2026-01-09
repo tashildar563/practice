@@ -8,16 +8,16 @@
   * navigate down tree using the comparisons
   * reaching the leaf node contain the key
   * uses the stored pointer to directly fetch the required row
-  * this reduces seach complexity from o(n) to o(log n)
+  * this reduces search complexity from o(n) to o(log n)
 * indexing slightly slows down insert, update and delete operation because the index must also be updated and they require extra storage;
-### How indexisng improve the performance
+### How indexing improve the performance
 * faster select queries by avoiding full table scans
 * efficient sorting for order by queries since data is already ordered in the index
 * foster join operation when indexing exists on join columns
 * redis disk i/o which is main bottleneck in database;
 
 ### what is 2PC ?
-* TWO PHASE COMMIT : is a distributed transaciton protocol used to ensure automicity that is a transaction either commits on all systems or roll back on all.
+* TWO PHASE COMMIT : is a distributed transaction protocol used to ensure automicity that is a transaction either commits on all systems or roll back on all.
 * why needed : in distributed system a transaction may involves multiple services or databases. if one commits and another fails data becomes inconsistent.
 * How ?
   * Phase 1 : prepare:
