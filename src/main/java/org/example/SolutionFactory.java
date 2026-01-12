@@ -207,6 +207,12 @@ public class SolutionFactory {
         return new MiniParser();
       case 91:
         return new SmallestSubtreewithalltheDeepestNodes();
+      case 92:
+        return new MinimumASCIIDeleteSumforTwoStrings();
+      case 93:
+        return new MaximumRectangle();
+      case 94:
+        return new MinimumTimeVisitingAllPoints();
       default:
         return null;
     }
