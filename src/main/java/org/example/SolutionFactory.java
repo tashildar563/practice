@@ -213,6 +213,8 @@ public class SolutionFactory {
         return new MaximumRectangle();
       case 94:
         return new MinimumTimeVisitingAllPoints();
+      case 95:
+        return new SeparateSquares_I();
       default:
         return null;
     }

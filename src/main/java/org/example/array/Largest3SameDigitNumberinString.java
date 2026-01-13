@@ -7,7 +7,6 @@ public class Largest3SameDigitNumberinString implements Solution {
   @Override
   public void logic() {
     String num = "6771339";
-    num = num.replaceFirst("0","2");
     long max = Integer.MIN_VALUE;
     String str = "";
     for (int i = 0; i <= num.length() - 3; i++) {

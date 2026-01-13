@@ -11,9 +11,9 @@ import org.example.Solution;
  *  we are given two string s1 and s2
  *  we are allowed to deltet characters form either string.
  *
- *  teh cost fo deleting a character is tis ASCII value.
+ *  the cost fo deleting a character is its ASCII value.
  *
- *  out goal is to make the two strings equal with the
+ *  our goal is to make the two strings equal with the
  *  MINIMUM possible total ASCII deletion cost
  *</p>
  *
@@ -62,7 +62,7 @@ import org.example.Solution;
  *
  *
  *     transition
- *       at possition (i,j)
+ *       at position (i,j)
  *
  *       1) if character Match : s1[i]=s2[j]
  *            then we keep this character in the subsequence.
