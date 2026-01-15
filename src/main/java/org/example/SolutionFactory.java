@@ -215,6 +215,14 @@ public class SolutionFactory {
         return new MinimumTimeVisitingAllPoints();
       case 95:
         return new SeparateSquares_I();
+      case 96:
+        return new SeparateSquaresII();
+      case 97:
+        return new MaximizeAreaofSquareHoleinGrid();
+      case 98:
+        return new NumberofZeroFilledSubarrays();
+      case 99:
+        return new CountSquareSubmatriceswithAllOnes();
       default:
         return null;
     }
