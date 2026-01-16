@@ -3,7 +3,56 @@
 manipulating a collection of objects.
 * collection framework are capable of doing any data operation such 
 as seraching, sorting, insertion, manipulation and deletion
+* the java collection framework is a unified architecture that provides classes and interface to store,
+manage, and manipulate groups of objects efficiently, supporting operations such as insertion, deleting, 
+searching, sorting and traversal.
 
+### 2 what is defference between Array and Collection in java?
+| Array                                                           | Collection                                                                      |
+|:----------------------------------------------------------------|:--------------------------------------------------------------------------------|
+| Fixed size                                                      | Dynamic Size                                                                    |
+| Same type(Homogeneous)                                          | object only                                                                     |
+| Array can store primitive and objects                           | only object stored                                                              |
+| provides fast access but not offers limited built in operation  | collection provide ready made methods like add, remove, search, sort, traversal |
+
+### what ArrayList in java
+* the ArrayList in java is a class within the java.util pkg that provides a resizable array implementation.
+
+### Collection vs Collections
+| Collection                                                                    | Collections                                                                      |
+|:------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| interface                                                                     | Utility class                                                                    |    
+| is a framework which provide architecture <br/>to store and manipulate the objects | contain exclusively of static methods to operate <br/> on or return collections. |
+
+### what is iterator
+* an iterator in java is one of the most commonly used cursors in the java Collection framework.<br/>
+it is used to traverse or iterate through elements of a collection one by one.
+* it is used to traverse elements in the forward direction only.
+* removes elements safely during traversal using removal().
+
+### iterator vs Enumeration
+| Iterator                                                                       | Enumeration                    |
+|:-------------------------------------------------------------------------------|:-------------------------------|
+| Part of collectio framework                                                    | lagecy class                   |
+| reading and removing elements during iteration is posisble                     | sopports only reading elements |
+| fail fast : cuncurrentModificationException if collectio structurelay modified | Fail safe                      |
+| ony forward traversal                                                          | only forward traversal.        |
+
+### what is hascode?
+* hascode() is a method in java that returns an iteger values used to uniquely indentify an object <b/> 
+for efficient storage and retrieval in hash-based collection like hashmap, hashset and hashtable.
+
+### contract between equals() and hashCode()
+* if two objects are equal using equals, they must have the same hash code.
+* if two objects have the same hascode, they may or may not be equal.
+
+### hashmap vs hashtable 
+| HashMap                                  | HashTable                            |
+|:-----------------------------------------|:-------------------------------------|
+| Not syncronised                          | Syncronised                          |
+| allows one null and multiple null values | donot allow null keys or null values |
+| faster beacuse it has no syncronised     | slower                               |
+| part of collection framework            | part of legacy classes.              |
 ### HashSet vs TreeSet
 | Feature        | HashSet     | TreeSet             |
 |:---------------|:------------|:--------------------|
@@ -162,12 +211,12 @@ stateDiagram
   * if map.put(k,v) returns value of key, then the statement `map.put(e,present) == null` will return false and element is not added.
   
 ### Array vs Collection
-| Array                                                                                                          | Collection                                                                                                    |
-|:---------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
-| Array are fixed in size that once we create an array we can not increase or decrease based on our requirements | the collection is growable in nature adn is based on our requirementsw. we can increase or decrease the size. |
-| with respect ot memory array are not recomended for use                                                        | With respect to memory collecitons are recomended for use                                                     |
-| Array can hold only homogeneous data types elements                                                            | Collection can hold both homogeneous and heterogeneous elements.                                              |
-| faster compare to collection                                                                                   | slower compare to array.                                                                                      |
+| Array                                                                                                                | Collection                                                                                                         |
+|:---------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| Array are fixed in size that once we create an array <br/> we can not increase or decrease based on our requirements | the collection is growable in nature adn is based on our<br/> requirementsw. we can increase or decrease the size. |
+| with respect ot memory array are not recomended for use                                                              | With respect to memory collecitons are recomended for use                                                          |
+| Array can hold only homogeneous data types elements                                                                  | Collection can hold both homogeneous and heterogeneous elements.                                                   |
+| faster compare to collection                                                                                         | slower compare to array.                                                                                           |
 
 ### Interface used in java collection : 
 1. List
