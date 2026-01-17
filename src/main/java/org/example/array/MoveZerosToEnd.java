@@ -14,10 +14,6 @@ public class MoveZerosToEnd implements Solution {
                     arr[count] = temp;
                     count++;
                 }
-                System.out.println();
-                for(int ii=0;ii<arr.length;ii++){
-                    System.out.print(arr[ii]+",");
-                }
             }
 
             System.out.println();

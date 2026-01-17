@@ -23,9 +23,16 @@ public class RotateArrayByD implements Solution {
           System.out.print(newArr[i]+",");
         }
       System.out.println();
+        //Left rotation : 0-(d-1) -> d-(n-1) -> 0-(n-1)
         reverseArr(arr,0,d-1);
         reverseArr(arr,d,arr.length-1);
         reverseArr(arr,0,arr.length-1);
+
+
+        //right rotation 0-(n-1) -> 0-(d-1) -> d-(n-1)
+      reverseArr(arr,0,arr.length-1);
+      reverseArr(arr,0,d-1);
+      reverseArr(arr,d,arr.length-1);
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+",");
         }

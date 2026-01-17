@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.array.*;
+import org.example.array.jan2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.slidingWindow.CountSubstringWithKDistinctCharacters;
 import org.example.cses.WeirdAlgorithm;
 import org.example.llinkedlist.DeleteDuplicatesFromSortedLinkedList;
@@ -223,6 +224,12 @@ public class SolutionFactory {
         return new NumberofZeroFilledSubarrays();
       case 99:
         return new CountSquareSubmatriceswithAllOnes();
+      case 100:
+        return new JavaPracticeCompiler();
+      case 101:
+        return new FindEvenNumber();
+      case 102:
+        return new FindtheLargestAreaofSquareInsideTwoRectangles();
       default:
         return null;
     }
