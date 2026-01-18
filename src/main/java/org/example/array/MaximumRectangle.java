@@ -7,8 +7,11 @@ public class MaximumRectangle implements Solution {
 
   @Override
   public void logic() {
-    String[][] matrix = {{"1", "0", "1", "0", "0"}, {"1", "0", "1", "1", "1"},
-        {"1", "1", "1", "1", "1"}, {"1", "0", "0", "1", "0"}};
+    String[][] matrix = {
+        {"1", "0", "1", "0", "0"},
+        {"1", "0", "1", "1", "1"},
+        {"1", "1", "1", "1", "1"},
+        {"1", "0", "0", "1", "0"}};
     int m = matrix.length, n = matrix[0].length;
     int[] height = new int[n];
     int ans = 0;

@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.array.*;
 import org.example.array.jan2026.FindtheLargestAreaofSquareInsideTwoRectangles;
+import org.example.array.jan2026.LargestMagicSquare;
+import org.example.array.jan2026.ThreadStateImplementation;
 import org.example.array.slidingWindow.CountSubstringWithKDistinctCharacters;
 import org.example.cses.WeirdAlgorithm;
 import org.example.llinkedlist.DeleteDuplicatesFromSortedLinkedList;
@@ -230,6 +232,10 @@ public class SolutionFactory {
         return new FindEvenNumber();
       case 102:
         return new FindtheLargestAreaofSquareInsideTwoRectangles();
+      case 103:
+        return new ThreadStateImplementation();
+      case 104:
+        return new LargestMagicSquare();
       default:
         return null;
     }
