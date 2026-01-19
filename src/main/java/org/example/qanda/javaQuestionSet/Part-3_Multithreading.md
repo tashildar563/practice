@@ -148,3 +148,32 @@ you should use a volatile variable in scenario where multiple threads access a s
   * double-checked locking : 
   * one writer many readers scenarios : when single thread is responsible for updating a shared variable and multiple other threads only read it.
 
+### what do you mean by inter thread communication ?
+* mechanismsm that allow mulitple threads running concurrently within a single process to coordinate their actions and exchnage data safely.
+* wait() : tells the current thread to give up its lock and go into a waiting state until anothre thread enters the same monitor and calls notify() or notifyAll();
+* notify() : wakes up a single, arbitary thread that is waiting on this objects monitor.
+* notifyAll() : wakes up all threads that are waiting on this objects monitor.
+
+### CountDownLatch 
+* purpose - A syncronisation aid where one or more threads block until a set of operation in other threads completes
+* one thread wait for many tasks.
+
+### CyclicBarriers
+* a syncronisation point where a fixed number of threads wait for each other to arrive before all are released.
+* many threads wait for each other.
+### can we start a thread twice ?
+* no you cannot  start the same Thread object twice in java.
+* if we attempt to call the start)_ method on a thread that has already been started the java virtual machine will throw an illegalThreadStateException at runtime.
+
+### what is livelock in java
+* livelock is a concurrency probem where two or more threads continuously change their states in response to one another <br/> consuming CPU cycle and system resources.
+* unlike deadlock the threads in livelock are not blocked theare are active and running, but they are stuck in futile lops of activity.
+
+### What is thread starvation
+* a thread is ready to run but never gets cpu time because higher priority threads or other threads keep taking all the resources.
+* the thread is alive and in the runnable state but cannot execute.
+* why ?
+  * priority based scheduling -> high priority threads monopolise cpu
+  * lock/synchronisation -> some thread keep acquiring lock , preventing others from accessing shared resources.
+  * infinite loop in other threads
+

@@ -71,6 +71,7 @@ import org.example.array.YEAR2025.UniqueNumber;
 import org.example.array.YEAR2025.WaystoExpressanIntegerasSumofPowers;
 import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
+import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
 import org.example.array.YEAR2026.ThreadStateImplementation;
 import org.example.array.slidingWindow.CountSubstringWithKDistinctCharacters;
 import org.example.cses.WeirdAlgorithm;
@@ -304,6 +305,8 @@ public class SolutionFactory {
         return new ThreadStateImplementation();
       case 104:
         return new LargestMagicSquare();
+      case 105:
+        return new MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold();
       default:
         return null;
     }

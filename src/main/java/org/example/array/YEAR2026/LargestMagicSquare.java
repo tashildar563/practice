@@ -24,10 +24,10 @@ public class LargestMagicSquare implements Solution {
          rowsum[i+1][j+1]=rowsum[i+1][j]+x;
          colsum[i+1][j+1]=colsum[i][j+1]+x;
          daig[i+1][j+1]=daig[i][j]+x;
-        antidiag[i+1][j]=rowsum[i][j+1]+x;
+        antidiag[i+1][j]=antidiag[i][j+1]+x;
       }
     }
-    for( int k=Math.max(rows,cols);k>=2;k++){
+    for( int k=Math.max(rows,cols);k>=2;k--){
       if(isMagic(k,rows,cols,rowsum,colsum,daig,antidiag)){
         System.out.println("output :"+k);
       }
@@ -38,7 +38,7 @@ public class LargestMagicSquare implements Solution {
 
   private boolean isMagic(int k, int rows, int cols, int[][] rowsum, int[][] colsum, int[][] daig, int[][] antidiag) {
     for(int i=0;i<=rows-k;i++){
-      for(int j=0;j<=cols;j++){
+      for(int j=0;j<=cols-k;j++){
         int s = daig[i+k][j+k]-daig[i][j];
         int anti = antidiag[i+k][j]-antidiag[i][j+k];
         if(s!=anti){
