@@ -69,6 +69,7 @@ import org.example.array.YEAR2025.TwoBestNonOverlappingEvents;
 import org.example.array.YEAR2025.TwoSum;
 import org.example.array.YEAR2025.UniqueNumber;
 import org.example.array.YEAR2025.WaystoExpressanIntegerasSumofPowers;
+import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayI;
 import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
 import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
@@ -307,6 +308,8 @@ public class SolutionFactory {
         return new LargestMagicSquare();
       case 105:
         return new MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold();
+      case 106:
+        return new ConstructtheMinimumBitwiseArrayI();
       default:
         return null;
     }
