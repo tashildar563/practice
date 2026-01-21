@@ -70,6 +70,7 @@ import org.example.array.YEAR2025.TwoSum;
 import org.example.array.YEAR2025.UniqueNumber;
 import org.example.array.YEAR2025.WaystoExpressanIntegerasSumofPowers;
 import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayI;
+import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayII;
 import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
 import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
@@ -310,6 +311,8 @@ public class SolutionFactory {
         return new MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold();
       case 106:
         return new ConstructtheMinimumBitwiseArrayI();
+      case 107:
+        return new ConstructtheMinimumBitwiseArrayII();
       default:
         return null;
     }

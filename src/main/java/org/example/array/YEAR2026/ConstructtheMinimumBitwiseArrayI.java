@@ -10,6 +10,8 @@ public class ConstructtheMinimumBitwiseArrayI implements Solution {
     int [] ans = new int[nums.length];
     for(int i=0;i<nums.length;i++){
       int e = nums[i];
+      //1111
+      //
       int j=0;
       while(j<=e){
         if((j|(j+1))==e){
