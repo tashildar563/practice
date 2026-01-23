@@ -75,6 +75,7 @@ import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
 import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
 import org.example.array.YEAR2026.MinimumPairRemovaltoSortArrayI;
+import org.example.array.YEAR2026.MinimumPairRemovaltoSortArrayII;
 import org.example.array.YEAR2026.ThreadStateImplementation;
 import org.example.array.slidingWindow.CountSubstringWithKDistinctCharacters;
 import org.example.cses.WeirdAlgorithm;
@@ -316,6 +317,8 @@ public class SolutionFactory {
         return new ConstructtheMinimumBitwiseArrayII();
       case 108:
         return new MinimumPairRemovaltoSortArrayI();
+      case 109:
+        return new MinimumPairRemovaltoSortArrayII();
       default:
         return null;
     }

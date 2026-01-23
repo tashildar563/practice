@@ -11,7 +11,6 @@ public class ConstructtheMinimumBitwiseArrayII implements Solution {
     int i =7;
     List<Integer> list = new ArrayList<>();
     getBinaryNumbers(list,i);
-    list = list.reversed();
 
 
   }
