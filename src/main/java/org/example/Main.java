@@ -26,8 +26,8 @@ public class Main {
 //    System.out.println();
 //    System.out.println("================================= " + solution.description() + " END=================================");
     Scanner sc = new Scanner(System.in);
-
-    while (true) {
+int i=1;
+//    while (i>=0) {
       try {
         System.out.println("Enter Sequence No :");
         int n = sc.nextInt();
@@ -74,12 +74,11 @@ public class Main {
         writer.write(html);
         writer.close();
         Desktop.getDesktop().browse(file.toURI());
-
+i--;
       } catch (Exception e) {
         e.printStackTrace();
-        break;
       }
-    }
+//    }
     sc.close();
   }
   private static String escapeHtml(String text) {

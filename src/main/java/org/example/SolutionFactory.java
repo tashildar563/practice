@@ -74,6 +74,7 @@ import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayII;
 import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
 import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
+import org.example.array.YEAR2026.MinimumDifferenceBetweenHighestandLowestofKScores;
 import org.example.array.YEAR2026.MinimumPairRemovaltoSortArrayI;
 import org.example.array.YEAR2026.MinimumPairRemovaltoSortArrayII;
 import org.example.array.YEAR2026.ThreadStateImplementation;
@@ -319,6 +320,8 @@ public class SolutionFactory {
         return new MinimumPairRemovaltoSortArrayI();
       case 109:
         return new MinimumPairRemovaltoSortArrayII();
+      case 110:
+         return new MinimumDifferenceBetweenHighestandLowestofKScores();
       default:
         return null;
     }
