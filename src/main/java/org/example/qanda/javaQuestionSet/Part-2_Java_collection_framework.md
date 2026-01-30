@@ -33,9 +33,9 @@ it is used to traverse or iterate through elements of a collection one by one.
 ### iterator vs Enumeration
 | Iterator                                                                       | Enumeration                    |
 |:-------------------------------------------------------------------------------|:-------------------------------|
-| Part of collectio framework                                                    | lagecy class                   |
-| reading and removing elements during iteration is posisble                     | sopports only reading elements |
-| fail fast : cuncurrentModificationException if collectio structurelay modified | Fail safe                      |
+| Part of collection framework                                                   | lagecy class                   |
+| reading and removing elements during iteration is possible                     | sopports only reading elements |
+| fail fast : concurrentModificationException if collection structurelay modified | Fail safe                      |
 | ony forward traversal                                                          | only forward traversal.        |
 
 ### what is hascode?
@@ -45,6 +45,10 @@ for efficient storage and retrieval in hash-based collection like hashmap, hashs
 ### contract between equals() and hashCode()
 * if two objects are equal using equals, they must have the same hash code.
 * if two objects have the same hascode, they may or may not be equal.
+
+### what will happen if two different key of the HashMap return the same hashcode().
+* in this case hashmap use bucketing technique to resolve this key collection.
+* in this case internaly the bucket will be identified and the liked list related </br> to that bucket will be scanned & keyss will be compared to find out the node.
 
 ### hashmap vs hashtable 
 | HashMap                                  | HashTable                            |
@@ -91,6 +95,34 @@ stateDiagram
 * This collection framework primary interface. is extended by the collection interface
 * main purpose is to provide an iterator for the collection.
 * this interface only has one abstract method, the iterator.
+
+### Iterator vs Enumeration
+| iterator                                                      | Enumeration                        |
+|:--------------------------------------------------------------|:-----------------------------------|
+| Non Syncronised                                               | Synchronised                       |
+| High performance                                              | Low performance                    |
+| Allow element removal during </br> iteration and is fail fast | read only & is fail safe           |
+| works with all modern collections                             | Limited legacy classes             |
+| iterator only in forward direction                            | iterator only in forward direction |
+| not synchronised                                              | synchronised                       |
+
+
+### iterator vs list-iterator
+| iterator                                       | list-iterator                                                                        |
+|:-----------------------------------------------|:-------------------------------------------------------------------------------------|
+| makes object iterable                          | makes object iterable                                                                |
+| only forward directional iteration             | both forward and backward directional iteration                                      |
+| can traverse list, set and map                 | only traverse list                                                                   |
+| cannot obtain the index of the current element | can obtain the index of the current element by </br> nextIndex() and previousIndex() |
+| starts iteration from the begining             | can start iteration from any specified index                                         |
+
+
+### fail-fast vs fail-safe
+| fail-fast                                  | fail-safe                                     |
+|:-------------------------------------------|:----------------------------------------------|
+| throws concurrentModificationException     | Do not throws concurrentModificationException |
+| works directyly on original collection     | Iterate over copy of collection               |
+| not suitable for multithreaded environment |                                               |
 
 ### Collection Interface
 * the Collection interface is the root interface of Java collections
@@ -154,6 +186,15 @@ stateDiagram
   * retrieving element using `get(index)`, since it is uses an array, O(1) - constant time.
   * while removing the index is validated and elements to the right of the removed element are shifted left by one position.
     and last element set to null to avoid memory leak. time complexity O(n) due to shifting.
+
+### Synchronise an ArrayList
+* in java we can synchronise an ArrayList to make it thread safe using two primary methods.
+  * Collection.synchronised();
+    * Achieved by blocking the entire list for each individual method call
+    * and iterator is fail-fast;
+  * by using CopyOnWriteArrayList class
+    * Achieved by creating new copy on every write operation.
+    * iterator is fail-safe.
 ### LinkedList
 * `LinkedList` is a doubly linked list implementation of the `List` and `Deque`.
 * allows duplicate element and maintains insertion order.
@@ -227,7 +268,7 @@ stateDiagram
 6. Deque
 
 ### Advantage of the collection framework
-* Consisten API
+* Consisted API
 * Reduces Programming effort
 * Increases program speed and quality
 
