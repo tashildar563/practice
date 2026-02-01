@@ -41,16 +41,16 @@ and retrieval of message
 ### What is acks configuration? Explain acks=0, acks=1, acks=all
 * in kafka the acks configure controls how many borkers must acknowledge a message write before the producer consider it successful
 * acks=0 fire and forget (fastest least durable)
-  * producer sends the message and imeediately considers the wrtie successful without waiting for any response from the broker
+  * producer sends the message and immediately considers the write successful without waiting for any response from the broker
 * acks=1 (leader acknowledgment)
-  * the producer waits for an acknowledgement from the leader replica only, which confirms it has written teh message to its local log.
+  * the producer waits for an acknowledgement from the leader replica only, which confirms it has written the message to its local log.
 * acks=all (all in sync replicas)
   * the producer waits for ack from the leader and all other in sync replicas.
 ### How does Kafka decide which partition a message goes to?
 * Message key : uses hash of the key to ensure all messages with the same key go to the same partition.
 * No key : round robin
 * custom partitioner : Implement custom Partitioner interface and specify it in their configuration.
-* A  producer can explicitly specify the exact partition number hte message should go to when sending the record
+* A  producer can explicitly specify the exact partition number the message should go to when sending the record
 
 ### What is batching in Kafka producers?
 * messages are grouped into a single request before being sent to the broker.
@@ -80,7 +80,7 @@ and retrieval of message
     * StickyAssignor
 
 ### Can two consumers in the same group read from the same partition?
-No two consumer in the same kafka consumer gorup cannot read the same partiion
+No two consumer in the same kafka consumer group cannot read the same partition
 
 ### What happens when a new consumer joins a group?
 rebalancing
@@ -88,17 +88,17 @@ partition assignment
 load balancing
 
 ### poll() in kafka
-* mechanism used by a consumer to actively fetch bathces of messages from that brokers.
+* mechanism used by a consumer to actively fetch bathes of messages from that brokers.
 * batch fetching :
-  * teh methods return a ConsumerRecords obkect which is a collection of records fetched from all assigned partition
+  * teh methods return a ConsumerRecords object which is a collection of records fetched from all assigned partition
 * Timeout mechanism
   * it also takes `timeout` duration as a parameter which is the maximum amount of time the method will block for data if no msg are immediately available.
 * offset mgmt : each successfully call to pull() automatically advances the consumer internal position for next fetch.
 * heartbeats adn liveness : calling poll() periodically is crucial for the consumers health and group mgmt.
 
 ### what happens if a consumer crashes ?
-* Heartbeat timeout : kafka detect cosnumer failure after it stop sending heartbeats to the kafka coordinator.
-* partition Reassignment : redistribution of partition amoung other active consumer from consumer group.
+* Heartbeat timeout : kafka detect costumer failure after it stop sending heartbeats to the kafka coordinator.
+* partition Reassignment : redistribution of partition among other active consumer from consumer group.
 * Resumption from last offset : new consumer assigned  a partition starts reading from the last committed offset for that partition, effectively picking up where the old one stopped.
 
 ### How do you control message reprocessing?

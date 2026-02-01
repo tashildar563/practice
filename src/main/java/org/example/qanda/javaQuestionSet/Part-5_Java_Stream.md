@@ -3,7 +3,7 @@
 2. Intermediate operations (filter,map,sorted) which are lazy and return a stream and 
 3. terminal operation (collect, reduce, forEach) which triggers evaluation. laziness enables fusion and short circuit (limit, anyMatch) for performance.
 4. Internal working
-   1. java processess elements one at a time
+   1. java processes elements one at a time
    2. stops as soon as it finds the first match.
    3. does not process the whole list
    ```mermaid
@@ -25,14 +25,15 @@
     2. forEachOrdered
         * always respects encounter order, even in parallel streams.
         * but slower because it waits and arranges results in the correct order.
-### what does "non-interfenence" and statelessness mean? why avoid side effects?
+       
+### what does "non-interference" and statelessness mean? why avoid side effects?
 1. Non interference 
     * stream operations must not change the source while the pipeline is running.
     * why? because streams traverse the data once in a predicatable way.
     * if the source changes mid-traversal -> unpredictable result or exceptions
 2. Statelessness
-   * each element's processing should not depend on external mutable state or on prevous elements.
+   * each element's processing should not depend on external mutable state or on previous elements.
    * the function must behave the same every time for the same input.
 
-### 
+
    

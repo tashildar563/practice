@@ -177,3 +177,12 @@ you should use a volatile variable in scenario where multiple threads access a s
   * lock/synchronisation -> some thread keep acquiring lock , preventing others from accessing shared resources.
   * infinite loop in other threads
 
+### Runnable vs Threads
+| Runnable                                                   | Threads                                          |
+|:-----------------------------------------------------------|:-------------------------------------------------|
+| Interface                                                  | Abstract class                                   |
+| which allows t inherit properties from other classes       | prevent inheriting properties from other classes |
+| flexibility is high , task can be decoupled from execution | low, task and thread ar tightly bond.            |
+| Runnable task can be used with multiple threads            | but not such provsion.                           |
+|                                                            |                                                  |
+

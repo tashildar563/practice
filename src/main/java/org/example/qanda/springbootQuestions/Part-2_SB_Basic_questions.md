@@ -64,3 +64,39 @@ spring boot handles caching through its @Cacheable through its @Caheable, @Cache
 * websocket
   * a new instance is created for each websocket connection
   * the bean is tied to the lifecycle of a websocket connection and is discarded once the connection is closed.
+
+### Spring boot exception handling 
+* Default exception handling by spring boot.
+* Using @ExceptionHandler Annotation
+  * it can be used to handle exception in perticular Handler classes or handler methods.
+  * annotated method identified as exception handler by spring configuration.
+  * an exception handler method handles all exceptions and their subclasses passed in the argument.
+  * it can also be configured to return a specific error response to the user.
+  ```java
+  // creating a custom exception that can be thrown when a user tries to add a customer that already exists
+  public class CustomerAlreadyExistsException extends RuntimeException{
+    private String message;
+    public CustomerAlreadyExistsException(){}
+    public CustomerAlreadyExistsException(String msg){
+      super(msg);
+      this.message = msg;
+    } 
+  }
+  // lets create ErrorResponse classes so that the exception is conveyed to the user in a clear and concise was as follows.
+  public class ErrorResponse{
+    private int statusCode;
+    private String message;
+    
+    public ErrorResponse(String message){
+      super();
+      this.message = message;
+    }
+  }
+  
+  // exception handler method added in CustomerController to handle CustomerAlreadyExistsException
+  @ExceptionHandler(value=CustomerAlreadyExistsException.class)
+  @ResponseStatus(HttpStatus.CONFLICT)
+  public ErrorResponse handleCustomerAlreadyException(CustomerAlreadyExcistsException ex){
+    return new ErrorResponse(HttpStatus.CONFLICT.value(),ex.getMessage());
+  } 
+  ```

@@ -15,14 +15,14 @@ class Main {
 ```
 
 ### What happen whe i run from cli?
-* The code will not compile, bcs java does not allow tow method with same signature even if one is public one is private ,
-  * method signature does not includes method name, paraneter types 
+* The code will not compile, bcs java does not allow two method with same signature even if one is public one is private ,
+  * method signature does not includes method name, parameter types 
   * access modifiers are not part of the method signature.
 
 
 ### Explain the Java Memory Model (JMM). How do volatile, synchronized, and final ensure visibility and ordering between threads?
-* the java memory model defines how threads interact through memory. it spedifies when a write by one thread becomes visibile to another thread and what execution order is allowed by compiler.
-* in java each thread may cache variables locally while main memory is shared. without jmm rules, thread could see stale or incosistent data due to reordering and caching.
+* the java memory model defines how threads interact through memory. it specifies when a write by one thread becomes visible to another thread and what execution order is allowed by compiler.
+* in java each thread may cache variables locally while main memory is shared. without jmm rules, thread could see stale or inconsistent data due to reordering and caching.
 * jmm solves this using the concept of happens-before relationships.
   * Happens-before relationship :
     * if A happens-before B, then: all writes in A are visibile to B , operation in A cannot be reordered after B.
@@ -34,15 +34,15 @@ class Main {
   * ensures visibility, not atomicity.
   * a writes to a volatile variable.
     * is immediately flushed to main memory
-    * happens-before every subsequesnt read of that varibale
-  * prevent instrusction reordering aroung the volatile variable.
+    * happens-before every subsequent read of that variable
+  * prevent instruction reordering around the volatile variable.
 * `syncronozed`
   * ensures visibility + atomicity + ordering
-  * when a thread exists a syncronized block;
+  * when a thread exists a synchronized block;
     * all changes are flushed to main memory.
   * when another thread enters the same lock;
     * it reads the latest values.
-  * prevents reordering inside syncronised blocks
+  * prevents reordering inside synchronised blocks
 * `final`
   * ensures safe publication
   * once a final field is initialised in a constructor
@@ -54,7 +54,7 @@ class Main {
 
 
 ### What is double lock testing in singleton?
-Double check locking in a singleton pattern is a techinique to create a single thread safe instance
+Double check locking in a singleton pattern is a technique to create a single thread safe instance
 efficiently in multithreaded apps by checking null twice.
 ```java
 public class Singleton{
