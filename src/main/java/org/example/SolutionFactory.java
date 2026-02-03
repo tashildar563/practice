@@ -72,6 +72,7 @@ import org.example.array.YEAR2025.WaystoExpressanIntegerasSumofPowers;
 import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayI;
 import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayII;
 import org.example.array.YEAR2026.DivideanArrayIntoSubarraysWithMinimumCostII;
+import org.example.array.YEAR2026.FindNUniqueIntegersSumuptoZero;
 import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
 import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
@@ -328,6 +329,8 @@ public class SolutionFactory {
         return new MinimumCosttoConvertString1();
       case 112:
         return new DivideanArrayIntoSubarraysWithMinimumCostII();
+      case 113:
+        return new FindNUniqueIntegersSumuptoZero();
       default:
         return null;
     }
