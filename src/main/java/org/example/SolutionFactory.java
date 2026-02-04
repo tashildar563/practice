@@ -81,6 +81,7 @@ import org.example.array.YEAR2026.MinimumDifferenceBetweenHighestandLowestofKSco
 import org.example.array.YEAR2026.MinimumPairRemovaltoSortArrayI;
 import org.example.array.YEAR2026.MinimumPairRemovaltoSortArrayII;
 import org.example.array.YEAR2026.ThreadStateImplementation;
+import org.example.array.YEAR2026.TrionicArrayII;
 import org.example.array.slidingWindow.CountSubstringWithKDistinctCharacters;
 import org.example.cses.WeirdAlgorithm;
 import org.example.llinkedlist.DeleteDuplicatesFromSortedLinkedList;
@@ -331,6 +332,8 @@ public class SolutionFactory {
         return new DivideanArrayIntoSubarraysWithMinimumCostII();
       case 113:
         return new FindNUniqueIntegersSumuptoZero();
+      case 114:
+        return  new TrionicArrayII();
       default:
         return null;
     }
