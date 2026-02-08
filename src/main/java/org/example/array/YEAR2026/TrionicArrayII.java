@@ -1,6 +1,7 @@
 package org.example.array.YEAR2026;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.example.Solution;
 
@@ -10,7 +11,6 @@ public class TrionicArrayII implements Solution {
   public void logic() {
     int nums[] = {2,993,-791,-635,-569};
     long sum = maxSumTrionic(nums);
-
     System.out.println("Sum : "+sum);
 
   }
