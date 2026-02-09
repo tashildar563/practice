@@ -1,5 +1,5 @@
 ### @Transaction
-* annotation in spring boot leverages spring AOP capabilities to manage database transaction declaratively. this mean that
+* Annotation in spring boot leverages spring AOP capabilities to manage database transaction declaratively. this mean that
 instead of manually writing code to begin, commit  or rollback transactions, you simply annotate methods or classes, and spring handles the transactional
 logi
 * the internal working

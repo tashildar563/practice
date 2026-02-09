@@ -31,3 +31,14 @@
       * coordinator senda rollback
       * all nodes check the transaction
 
+### what is an index? explain its different types.
+* A database index is a data structure taht provides a quick lookup of data in a column or columns of a table. it enhances the speed of operations accessing data from a data base tables at cost of additional writes and memory to mentain the index data structure.
+* different types:
+  * unique index : helps to mentain data intigrity by ensuring that no two rows of data in a table have identical key values.
+  ```sql 
+    CREATE UNIQUE INDEX myindex ON students(enroll_no);
+  ```
+  * non unique index : are not used to enforce contraints on the table with which the are associated. instead non unique indexes are used sololy to improve query performance by maintaining a sorted order of data values that are used frequently.
+  * clustered index : are indexes where order of the rows in the database corresponds to the order of the rows in the index. this why only one clustered index can exist in a given table whereas mulitple non clustered indexes can exists in the table.
+  * only difference between clustered and non clustered indses is that the databse manager attempts to keep the data in the db in the same order as corresponding keys appear in the clustered index.
+

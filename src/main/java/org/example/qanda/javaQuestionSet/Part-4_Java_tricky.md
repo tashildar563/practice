@@ -16,7 +16,7 @@ class Main {
 
 ### What happen whe i run from cli?
 * The code will not compile, bcs java does not allow two method with same signature even if one is public one is private ,
-  * method signature does not includes method name, parameter types 
+  * method signature includes method name, parameter types 
   * access modifiers are not part of the method signature.
 
 

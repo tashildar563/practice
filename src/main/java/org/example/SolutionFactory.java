@@ -69,6 +69,7 @@ import org.example.array.YEAR2025.TwoBestNonOverlappingEvents;
 import org.example.array.YEAR2025.TwoSum;
 import org.example.array.YEAR2025.UniqueNumber;
 import org.example.array.YEAR2025.WaystoExpressanIntegerasSumofPowers;
+import org.example.array.YEAR2026.BalanceaBinarySearchTree;
 import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayI;
 import org.example.array.YEAR2026.ConstructtheMinimumBitwiseArrayII;
 import org.example.array.YEAR2026.DivideanArrayIntoSubarraysWithMinimumCostII;
@@ -334,6 +335,8 @@ public class SolutionFactory {
         return new FindNUniqueIntegersSumuptoZero();
       case 114:
         return  new TrionicArrayII();
+      case 115:
+        return new BalanceaBinarySearchTree();
       default:
         return null;
     }
