@@ -56,3 +56,19 @@ stateDiagram
     Optional<User> findByUsernameInNative(String username);
     }
    ```
+   
+
+## can configure multiple data source in spring boot
+* we can configure multiple data source
+* Step 
+  * define two `DataSource` beans
+    * create two `EntityManagerFactory` beans
+  * configure separate `TransactionManager`
+  * Use `@Primary` and `@Qualifier` to differentiate
+
+## @ModelAttribute and @RequestParam
+| @ModelAttribute                                                         | @RequestParam                                                                                    |
+|:------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| Used when you want to bind multiple form fields to a java object        | used when you want to get a single value from the request, like query parameter or a form field. |
+| spring automatically fills the fields of the object using the form data | you manually bind each value to a method parameter.                                              |
+| very useful when handling HTML forms (like registration or login).      |                                                                                                  |

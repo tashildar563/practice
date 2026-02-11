@@ -35,5 +35,9 @@
    * each element's processing should not depend on external mutable state or on previous elements.
    * the function must behave the same every time for the same input.
 
+### when to use map and flatMap ?
+* map() it is used where we have to map the elements of a particular collection to specific function, and then we need to return the stream that contains the updated results.
+* flatMap() : it is used where we have to transform or flatten the string, as we cant flatten our string using map().
+
 
    
