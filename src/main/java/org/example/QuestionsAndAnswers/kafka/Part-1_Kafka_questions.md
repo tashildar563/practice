@@ -31,9 +31,9 @@ and retrieval of message
   * cluster coordination
   * Serving clients : brokers receive requests from producers and consumers.
 ### topic 
-* kafka topic is a logical channel to which producer send message and from which consumer recieve messages.
+* kafka topic is a logical channel to which producer send message and from which consumer receive messages.
 * characters
-  * partiotioning: each kafka topic is devided into partitions.
+  * partitioning: each kafka topic is devided into partitions.
   * durability 
   * topic name to identify each topic by unique name.
   * Retention policy.
@@ -94,7 +94,7 @@ load balancing
 * Timeout mechanism
   * it also takes `timeout` duration as a parameter which is the maximum amount of time the method will block for data if no msg are immediately available.
 * offset mgmt : each successfully call to pull() automatically advances the consumer internal position for next fetch.
-* heartbeats adn liveness : calling poll() periodically is crucial for the consumers health and group mgmt.
+* heartbeats and liveness : calling poll() periodically is crucial for the consumers health and group mgmt.
 
 ### what happens if a consumer crashes ?
 * Heartbeat timeout : kafka detect costumer failure after it stop sending heartbeats to the kafka coordinator.

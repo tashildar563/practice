@@ -24,13 +24,13 @@ and embedded application server(like tomcat, jetty).
 
 ### Explain @RestController annotation in spring boot?
 * @RestController is a convenience annotation for creating restful controllers. it is a specialisation of @Component and is autodetected through classpath scanning. it adds the @Controller and @ResponseBody annotations. it converts the reponse to JSON or XML
-* which eliminates teh need to annotate every request handling method of the controller class with the @ResponseBody annotation. it is typically used in combination with annotated handler method based on the @requestMapping annotation.
+* which eliminates the need to annotate every request handling method of the controller class with the @ResponseBody annotation. it is typically used in combination with annotated handler method based on the @requestMapping annotation.
 * indicates that the data returned by each method will be written straight into the response body instead of rendering a template.
 
 ### how does Springboot support asynchronous processing?
 spring boot supports asynchronous processing using the @Async annotation. to enable it you need to add @EnableAsync in a configuration class. methods annotated with @Async run in a separate thread pool and return a Future or CompletableFuture.
 
-### What is the significance fo spring boots @Conditional annotations?
+### What is the significance of spring boots @Conditional annotations?
 * Spring boots @Conditional annotations allows beans to be loaded conditionally based on:
   * the presence/absence of a class (@ConditionalOnClass or @ConditionalOnMissingClass).
   * A specific property value (@ConditionalOnProperty).
@@ -54,7 +54,7 @@ spring boot handles caching through its @Cacheable through its @Caheable, @Cache
   * this scope is suitable for beans that need to be stateless or have a short lifecycle.
 * request
   * a new instance is created for each HTTP request.
-  * teh bean is only available during the lifecycle of the http request and is discarded after teh request is completed.
+  * the bean is only available during the lifecycle of the http request and is discarded after teh request is completed.
 * session 
   * new instance is created for each http session.
   * the bean is only available during the lifecycle of the http request and is discarded after the request is completed.

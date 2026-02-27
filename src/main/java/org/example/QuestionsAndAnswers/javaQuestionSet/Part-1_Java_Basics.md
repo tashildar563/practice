@@ -40,8 +40,8 @@ methods, contractors, and variables. they control who can access what in program
   * default - only within the same packages not accessible from outside the package.
 
 ### 5 what is a constructor/ how is it different from a method?
-* a constructo in java is a special block of coe used to initialise objects. it runs automatically when an object is created using new keywork.
-  * a constuctor
+* a constructor in java is a special block of code used to initialise objects. it runs automatically when an object is created using new keywork.
+  * a constructor
     * has the same name as the class
     * does not have a return type (not even void)
     

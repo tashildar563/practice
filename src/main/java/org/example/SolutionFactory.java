@@ -76,6 +76,7 @@ import org.example.array.YEAR2026.DivideanArrayIntoSubarraysWithMinimumCostII;
 import org.example.array.YEAR2026.FindNUniqueIntegersSumuptoZero;
 import org.example.array.YEAR2026.FindtheLargestAreaofSquareInsideTwoRectangles;
 import org.example.array.YEAR2026.LargestMagicSquare;
+import org.example.array.YEAR2026.LongestBalancedSubstringI;
 import org.example.array.YEAR2026.MaximumSideLengthofaSquarewithSumLessthanorEqualtoThreshold;
 import org.example.array.YEAR2026.MinimumCosttoConvertString1;
 import org.example.array.YEAR2026.MinimumDifferenceBetweenHighestandLowestofKScores;
@@ -337,6 +338,8 @@ public class SolutionFactory {
         return  new TrionicArrayII();
       case 115:
         return new BalanceaBinarySearchTree();
+      case 116:
+        return new LongestBalancedSubstringI();
       default:
         return null;
     }

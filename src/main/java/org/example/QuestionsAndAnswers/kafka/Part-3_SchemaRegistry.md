@@ -9,17 +9,17 @@
 * Decoupling :
 * simplified development :
 
-### How does Schema Registry work with producers and consumers?How does Schema Registry work with producers and consumers?
+### How does Schema Registry work with producers and consumers?
 * producer side
   * Writing data
     * Register schema : before sending teh producer checks if it data schema is registered with schema reigstery.
-    * if new the registry stores the shcema and return a unique Schema id
+    * if new the registry stores the schema and return a unique Schema id
     * Serialise and prefix : the producer serialise the data into bytes using the schema and prepends the schema id to the message before sending it to kafka topic
 * consumer side 
   * reading data
     * fetch id : the consumer reads the message from the kafka extract the Schema id from the beginining fo the payload
-    * retrieve shcema : it use the id and request corresponding shcel fro scheman registrh
-    * deserialise : the consumer uses the retrieved shcema to desrialise the binary data back into structured object 
+    * retrieve schema : it use the id and request corresponding shell from schema registry
+    * deserialize : the consumer uses the retrieved schema to deserialize the binary data back into structured object 
 
 ### What are schema compatibility types?
 * Backward: new consumers can process data from old producers

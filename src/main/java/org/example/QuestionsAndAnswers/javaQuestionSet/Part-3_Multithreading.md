@@ -186,3 +186,10 @@ you should use a volatile variable in scenario where multiple threads access a s
 | Runnable task can be used with multiple threads            | but not such provsion.                           |
 |                                                            |                                                  |
 
+### Runnable vs Callable
+| Runnable                                                               | Callable                                                      |
+|:-----------------------------------------------------------------------|:--------------------------------------------------------------|
+| part of java.lang                                                      | part of java.util.concurrent                                  |
+| it cannot return the result of computation                             | it can return the result of the parallel processing of a task |
+| it cannot throw a checked exception                                    | it can throw a checked exception                              |
+| in a runnable interface, one need to override the run() method in java | in order to use callable, you need to override the call()     |

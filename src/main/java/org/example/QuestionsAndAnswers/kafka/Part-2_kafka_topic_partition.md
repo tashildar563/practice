@@ -12,7 +12,7 @@ maintained across different brokers in a cluster providing
 fault tolerance and high availability by preventing data loss if a broker fails.
 
 ### How does Kafka achieve Exactly-Once?
-by combining idempotent producer and automic transaction that froup message wrties and offset commit together
+by combining idempotent producer and atomic transaction that group message writes and offset commit together
 
 ### how to create idempotence producer 
 defining the property `spring.kafka.producer.enable-idempotence=true`

@@ -22,9 +22,9 @@
 * support advanced features (timeouts, rejection policies, monitoring)
 
 ### what is a single thread executor?
-* a single thread executor is an ExcecutorService that manages exactly only </br> worker thread to execute submitted task. all are placed in a queue and are executed sequentially. ensuring that no two task run at the same time. this makes it usefull when you need  ordered execution or want to avoid </br> sunchronisation issue by preventing concurrent access to shared resources. if the single thread fails due to an exception, the executor automatically creates a new one to continue processing tasks.
+* a single thread executor is an ExecutorService that manages exactly only </br> worker thread to execute submitted task. all are placed in a queue and are executed sequentially. ensuring that no two task run at the same time. this makes it usefull when you need  ordered execution or want to avoid </br> sunchronisation issue by preventing concurrent access to shared resources. if the single thread fails due to an exception, the executor automatically creates a new one to continue processing tasks.
 
-### explain the life cyle of an ExecutorServices ?
+### explain the life cycle of an ExecutorServices ?
 * creation :
   * executor is created using executors factory method or ThreadPoolExecutor
   * no threads are created immediately
