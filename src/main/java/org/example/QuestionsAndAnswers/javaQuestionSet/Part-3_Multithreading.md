@@ -1,3 +1,5 @@
+### what is thread
+
 ### 1. How do you create a thread in java?
 * Create thread in java by either
   * Extending the `Thread` class : create a subclass of thread and override the run() method to define the task.
@@ -149,25 +151,25 @@ you should use a volatile variable in scenario where multiple threads access a s
   * one writer many readers scenarios : when single thread is responsible for updating a shared variable and multiple other threads only read it.
 
 ### what do you mean by inter thread communication ?
-* mechanismsm that allow mulitple threads running concurrently within a single process to coordinate their actions and exchnage data safely.
+* mechanisms that allow multiple threads running concurrently within a single process to coordinate their actions and exchnage data safely.
 * wait() : tells the current thread to give up its lock and go into a waiting state until anothre thread enters the same monitor and calls notify() or notifyAll();
-* notify() : wakes up a single, arbitary thread that is waiting on this objects monitor.
+* notify() : wakes up a single, arbitrary thread that is waiting on this objects monitor.
 * notifyAll() : wakes up all threads that are waiting on this objects monitor.
 
 ### CountDownLatch 
-* purpose - A syncronisation aid where one or more threads block until a set of operation in other threads completes
+* purpose - A synchronisation aid where one or more threads block until a set of operation in other threads completes
 * one thread wait for many tasks.
 
 ### CyclicBarriers
-* a syncronisation point where a fixed number of threads wait for each other to arrive before all are released.
+* a synchronisation point where a fixed number of threads wait for each other to arrive before all are released.
 * many threads wait for each other.
 ### can we start a thread twice ?
 * no you cannot  start the same Thread object twice in java.
 * if we attempt to call the start)_ method on a thread that has already been started the java virtual machine will throw an illegalThreadStateException at runtime.
 
 ### what is livelock in java
-* livelock is a concurrency probem where two or more threads continuously change their states in response to one another <br/> consuming CPU cycle and system resources.
-* unlike deadlock the threads in livelock are not blocked theare are active and running, but they are stuck in futile lops of activity.
+* livelock is a concurrency problem where two or more threads continuously change their states in response to one another <br/> consuming CPU cycle and system resources.
+* unlike deadlock the threads in livelock are not blocked threads are active and running, but they are stuck in futile lops of activity.
 
 ### What is thread starvation
 * a thread is ready to run but never gets cpu time because higher priority threads or other threads keep taking all the resources.
@@ -181,9 +183,9 @@ you should use a volatile variable in scenario where multiple threads access a s
 | Runnable                                                   | Threads                                          |
 |:-----------------------------------------------------------|:-------------------------------------------------|
 | Interface                                                  | Abstract class                                   |
-| which allows t inherit properties from other classes       | prevent inheriting properties from other classes |
-| flexibility is high , task can be decoupled from execution | low, task and thread ar tightly bond.            |
-| Runnable task can be used with multiple threads            | but not such provsion.                           |
+| which allows to inherit properties from other classes      | prevent inheriting properties from other classes |
+| flexibility is high , task can be decoupled from execution | low, task and thread are tightly bond.           |
+| Runnable task can be used with multiple threads            | but not such provision.                           |
 |                                                            |                                                  |
 
 ### Runnable vs Callable

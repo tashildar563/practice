@@ -19,8 +19,8 @@
 |                                                                |                                                                                                                                                         |
 
 ### put vs post vs patch
-| post                                                                   | put                                                                              | patch                                                        |
-|:-----------------------------------------------------------------------|:---------------------------------------------------------------------------------|:-------------------------------------------------------------|
-| create a new resouce                                                   | replace an entire resouces or create if it doesnt exist at know uri              | apply partial modification to an existing resource           |
-| send data to a collection URI the server genrates the new resource uri | requires the client to send the complete resouce representaion to a specific uri | requries sending only the specific fields that need updating |
-| not idempotent                                                         | idempotent                                                                       | not necesarily idempotent                                    |
+| post                                                                                                                 | put                                                                              | patch                                                        |
+|:---------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|:-------------------------------------------------------------|
+| create a new resouce                                                                                                 | replace an entire resouces or create if it doesnt exist at know uri              | apply partial modification to an existing resource           |
+| send data to a collection URI (group of resources ex /users /orders) </br> the server generates the new resource uri | requires the client to send the complete resouce representaion to a specific uri | requries sending only the specific fields that need updating |
+| not idempotent                                                                                                       | idempotent                                                                       | not necesarily idempotent                                    |

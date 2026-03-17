@@ -68,7 +68,7 @@ methods, contractors, and variables. they control who can access what in program
 * ***Abstract*** class is a class that cannot be instantiated and may contain abstract methods as well as regular methods.
   * declared using **abstract** keyword.
   * can have constructors.
-  * can have variables, including non final ones
+  * can have variables, including non-final ones
   * used when we want partial abstraction and shared functionality.
 * ***Interface*** is fully abstract blueprint of a class.
   * only contains abstract methods before java-8 but can also have
@@ -176,6 +176,16 @@ this() for the same class or super() for the parent class this call must be the 
 ### why are constructor not inherited in java?
 constructors are not inherited because they match the class name subclass constructors 
 can call superclass constructor using super() for initialisation.
+
+### static methods in interfaces
+*  these are similar to default methods just that its static hence its implementation cannot be changed in child classes.
+* thus implementing class need not and cannot change the definition.
+* similar to static methods these should also be called through interface name.
+
+### why do we need static methods
+* interface static method helps us in providing security by not allowing implementation classes to override them.
+* interface static methods are good for providing utility methods ex : null check
+
 
 
 
